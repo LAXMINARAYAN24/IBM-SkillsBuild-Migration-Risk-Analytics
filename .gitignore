@@ -1,0 +1,25 @@
+# Large raw dataset files (exceeds GitHub 100MB file limit)
+data/cps_00001.csv
+*.zip
+*.tar.gz
+
+# Python virtual environment & cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+venv/
+env/
+.venv/
+
+# Frontend dependencies & build outputs
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# IDE & OS temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

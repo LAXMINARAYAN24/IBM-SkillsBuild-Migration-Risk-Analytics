@@ -1,0 +1,13 @@
+{
+  "total_records": 1405496,
+  "total_states": 51,
+  "year_range": "2010-2019",
+  "overall_migration_rate": 0.032911513088617825,
+  "model_accuracy": 0.6616648938385074,
+  "model_precision": 0.05458183977305214,
+  "model_recall": 0.5937088864968305,
+  "model_f1": 0.09997281158427905,
+  "model_auc": 0.6755820430677367,
+  "highest_risk_state": "Virginia",
+  "highest_risk_score": 0.6277693934457164
+}
