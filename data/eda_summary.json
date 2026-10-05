@@ -2,12 +2,22 @@
   "total_records": 1405496,
   "total_states": 51,
   "year_range": "2010-2019",
-  "overall_migration_rate": 0.032911513088617825,
-  "model_accuracy": 0.6616648938385074,
-  "model_precision": 0.05458183977305214,
-  "model_recall": 0.5937088864968305,
-  "model_f1": 0.09997281158427905,
-  "model_auc": 0.6755820430677367,
-  "highest_risk_state": "Virginia",
-  "highest_risk_score": 0.6277693934457164
+  "overall_migration_rate": 0.01547167450593608,
+  "model_accuracy": 0.9516528941261976,
+  "model_precision": 0.0646908231587239,
+  "model_recall": 0.16717557251908396,
+  "model_f1": 0.09328411188414028,
+  "model_auc": 0.6993579410450982,
+  "model_average_precision": 0.0474775753137442,
+  "model_brier": 0.014473095939154787,
+  "model_name": "boosting_31",
+  "test_records": 264173,
+  "decision_threshold": 0.055953623418668594,
+  "highest_risk_state": "District of Columbia",
+  "highest_risk_score": 0.05259827129544732,
+  "interpretation": "Past-year interstate moves among current residents; not future outflow.",
+  "risk_bands": {
+    "medium_min": 0.027976811709334297,
+    "high_min": 0.055953623418668594
+  }
 }

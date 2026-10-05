@@ -10,9 +10,9 @@ const datasetFiles = [
     category: 'Model Output',
     size: '4.8 KB',
     records: '51 states + D.C.',
-    source: 'Trained Logistic Regression Pipeline',
+    source: 'Audited calibrated classification pipeline',
     status: 'Verified',
-    date: '2026-09-18',
+    date: '2026-10-05',
     downloadUrl: '/data/state_risk_scores.csv'
   },
   {
@@ -22,7 +22,7 @@ const datasetFiles = [
     records: '2,000 Microdata rows',
     source: 'Holdout Test Inference Split',
     status: 'Verified',
-    date: '2026-09-18',
+    date: '2026-10-05',
     downloadUrl: '/data/individual_predictions.csv'
   },
   {
@@ -32,7 +32,7 @@ const datasetFiles = [
     records: 'System Metrics & AUC',
     source: 'Evaluation Pipeline',
     status: 'Verified',
-    date: '2026-09-18',
+    date: '2026-10-05',
     downloadUrl: '/data/eda_summary.json'
   },
   {
@@ -59,10 +59,10 @@ const datasetFiles = [
     name: 'eda_and_modeling.ipynb',
     category: 'Jupyter Artifact',
     size: '1.2 MB',
-    records: 'Full ML Pipeline & EDA',
-    source: 'Submission Code Notebook',
-    status: 'Compiled',
-    date: '2026-09-18',
+    records: 'Historical notebook export',
+    source: 'Not used for audited results',
+    status: 'Archived',
+    date: '2026-10-05',
     downloadUrl: '#'
   }
 ];
@@ -108,7 +108,7 @@ export default function FileManagement() {
         <div className="admin-card p-4.5">
           <p className="text-[11px] font-bold uppercase tracking-wider text-indigo-400">Total Records Ingested</p>
           <p className="text-2xl font-black text-indigo-400 mt-1 font-mono">1,402,051</p>
-          <p className="text-[11px] text-gray-400 mt-1">Fully cleaned and standardized</p>
+          <p className="text-[11px] text-gray-400 mt-1">Eligible rows after audited cleaning</p>
         </div>
         <div className="admin-card p-4.5">
           <p className="text-[11px] font-bold uppercase tracking-wider text-emerald-400">Pipeline Status</p>

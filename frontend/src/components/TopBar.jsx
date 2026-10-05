@@ -15,8 +15,8 @@ const languages = [
 const initialNotifications = [
   {
     id: 1,
-    title: 'High Outflow Risk Alert',
-    desc: 'Wyoming migration probability reached 52.4%',
+    title: 'Holdout results refreshed',
+    desc: 'State estimates now use calibrated 2018–2019 results',
     time: '5m ago',
     unread: true,
     type: 'alert',
@@ -26,7 +26,7 @@ const initialNotifications = [
   {
     id: 2,
     title: 'Model Validation Complete',
-    desc: 'Logistic Regression AUC evaluated at 0.7248',
+    desc: 'Selected model ROC-AUC: 0.6994',
     time: '35m ago',
     unread: true,
     type: 'success',
@@ -36,7 +36,7 @@ const initialNotifications = [
   {
     id: 3,
     title: 'Census Datasets Ingested',
-    desc: '1,400,000 IPUMS & Census records active',
+    desc: '1.405M eligible CPS records audited',
     time: '2h ago',
     unread: false,
     type: 'info',

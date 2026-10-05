@@ -203,7 +203,7 @@ export default function Sidebar({ collapsed, setCollapsed }) {
             </div>
             <p className="text-[10px] leading-relaxed text-gray-400">
               IPUMS CPS + U.S. Census Bureau<br />
-              1.4M microdata records active
+              1.405M eligible microdata records
             </p>
           </div>
         ) : (

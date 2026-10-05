@@ -17,7 +17,7 @@ const CustomTooltip = ({ active, payload, label }) => {
       >
         <p className="font-bold text-white mb-1">{label}</p>
         <p className="text-indigo-400 font-mono font-medium">
-          Predicted Outflow Risk: {(payload[0].value * 100).toFixed(2)}%
+          Estimated interstate-move rate: {(payload[0].value * 100).toFixed(2)}%
         </p>
       </div>
     );
@@ -42,10 +42,10 @@ export default function MigrationChart({ data }) {
         <div>
           <h3 className="section-title flex items-center gap-2">
             <Flame size={18} className="text-rose-400" />
-            Top 10 Outflow Risk States
+            Top 10 Estimated Interstate-Move Rates
           </h3>
           <p className="text-xs text-gray-400 mt-0.5">
-            Average modeled migration flight score (2018–2019 predictions)
+            Average calibrated estimate in the 2018–2019 holdout
           </p>
         </div>
         <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-rose-500/10 text-rose-400 border border-rose-500/20">
@@ -57,7 +57,7 @@ export default function MigrationChart({ data }) {
         <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 30 }}>
           <XAxis
             type="number"
-            domain={[0, 0.65]}
+            domain={[0, 'dataMax']}
             tickFormatter={(val) => `${(val * 100).toFixed(0)}%`}
             tick={{ fill: '#94a3b8', fontSize: 11 }}
             axisLine={{ stroke: 'var(--border-color)' }}

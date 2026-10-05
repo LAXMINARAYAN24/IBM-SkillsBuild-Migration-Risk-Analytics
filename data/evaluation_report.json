@@ -1,0 +1,279 @@
+{
+  "selected_model": "boosting_31",
+  "selection_metric": "validation average precision (unweighted)",
+  "decision_threshold": 0.055953623418668594,
+  "candidates": {
+    "logistic": {
+      "validation": {
+        "roc_auc": 0.6898656545051329,
+        "average_precision": 0.0405342474575896,
+        "accuracy": 0.9522657086478308,
+        "precision": 0.06208670095518001,
+        "recall": 0.13940060489414352,
+        "f1": 0.08591036177243074,
+        "brier": 0.01567890112485957,
+        "log_loss": 0.07860736791262182,
+        "observed_rate": 0.016091353938997088,
+        "mean_probability": 0.017271479615675617,
+        "confusion_matrix": [
+          [
+            214726,
+            7659
+          ],
+          [
+            3130,
+            507
+          ]
+        ]
+      },
+      "threshold": 0.047214915101704405,
+      "seconds": 3.0386116999998194
+    },
+    "boosting_15": {
+      "validation": {
+        "roc_auc": 0.705921260078697,
+        "average_precision": 0.04680288198063355,
+        "accuracy": 0.9451159621629753,
+        "precision": 0.06551040634291377,
+        "recall": 0.18174319494088534,
+        "f1": 0.09630654913673782,
+        "brier": 0.015632837272303173,
+        "log_loss": 0.07776212728208658,
+        "observed_rate": 0.016091353938997088,
+        "mean_probability": 0.017557790602577606,
+        "confusion_matrix": [
+          [
+            212956,
+            9429
+          ],
+          [
+            2976,
+            661
+          ]
+        ]
+      },
+      "threshold": 0.05315805505649958,
+      "seconds": 6.430932599999323
+    },
+    "boosting_31": {
+      "validation": {
+        "roc_auc": 0.7053106081236242,
+        "average_precision": 0.0484965517526279,
+        "accuracy": 0.9494075797931175,
+        "precision": 0.06754658385093168,
+        "recall": 0.16744569700302447,
+        "f1": 0.09626175610527148,
+        "brier": 0.01563334741601774,
+        "log_loss": 0.07780302618562972,
+        "observed_rate": 0.016091353938997088,
+        "mean_probability": 0.01752365282916991,
+        "confusion_matrix": [
+          [
+            213978,
+            8407
+          ],
+          [
+            3028,
+            609
+          ]
+        ]
+      },
+      "threshold": 0.055953623418668594,
+      "seconds": 4.56385119999959
+    }
+  },
+  "test": {
+    "roc_auc": 0.6993579410450982,
+    "average_precision": 0.0474775753137442,
+    "accuracy": 0.9516528941261976,
+    "precision": 0.0646908231587239,
+    "recall": 0.16717557251908396,
+    "f1": 0.09328411188414028,
+    "brier": 0.014473095939154787,
+    "log_loss": 0.07332215976765946,
+    "observed_rate": 0.014876614945509193,
+    "mean_probability": 0.017099921391453277,
+    "confusion_matrix": [
+      [
+        250744,
+        9499
+      ],
+      [
+        3273,
+        657
+      ]
+    ]
+  },
+  "test_survey_weighted": {
+    "roc_auc": 0.6921015572728226,
+    "average_precision": 0.039838558643085165,
+    "accuracy": 0.9559675690384546,
+    "precision": 0.060460395491786084,
+    "recall": 0.13062618318585545,
+    "f1": 0.08266107176812837,
+    "brier": 0.014821014772141893,
+    "log_loss": 0.07510022207188809,
+    "observed_rate": 0.015187407235220532,
+    "mean_probability": 0.015623788732841917,
+    "confusion_matrix": [
+      [
+        475048116.55999607,
+        15351634.839999976
+      ],
+      [
+        6574865.040000013,
+        987894.3999999999
+      ]
+    ]
+  },
+  "logistic_baseline_test": {
+    "roc_auc": 0.6960445399537967,
+    "average_precision": 0.03919242225094655,
+    "accuracy": 0.9532957569471521,
+    "precision": 0.05672711935892029,
+    "recall": 0.13689567430025446,
+    "f1": 0.0802147010585955,
+    "brier": 0.014514666288913274,
+    "log_loss": 0.0737403174361837,
+    "observed_rate": 0.014876614945509193,
+    "mean_probability": 0.01702757119544269,
+    "confusion_matrix": [
+      [
+        251297,
+        8946
+      ],
+      [
+        3392,
+        538
+      ]
+    ]
+  },
+  "no_skill_test": {
+    "roc_auc": 0.5,
+    "average_precision": 0.014876614945509193,
+    "accuracy": 0.9851233850544908,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "brier": 0.014655697064107845,
+    "log_loss": 0.07737881667348859,
+    "observed_rate": 0.014876614945509193,
+    "mean_probability": 0.01550573404042995,
+    "confusion_matrix": [
+      [
+        260243,
+        0
+      ],
+      [
+        3930,
+        0
+      ]
+    ]
+  },
+  "splits": {
+    "train": {
+      "rows": 826600,
+      "years": [
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015
+      ],
+      "positive_count": 12705,
+      "unknown_person_ids": 0
+    },
+    "validation": {
+      "rows": 226022,
+      "years": [
+        2016,
+        2017
+      ],
+      "positive_count": 3637,
+      "unknown_person_ids": 0
+    },
+    "test": {
+      "rows": 264173,
+      "years": [
+        2018,
+        2019
+      ],
+      "positive_count": 3930,
+      "unknown_person_ids": 0
+    }
+  },
+  "purged_earlier_records": 88701,
+  "features": [
+    "AGE",
+    "LOG_INCOME",
+    "AGE_SQUARED",
+    "STATEFIP",
+    "SEX",
+    "RACE",
+    "EDUC"
+  ],
+  "target": "MIGRATE1 == 5; codes 1,3,4 are negative",
+  "interpretation": "Past-year interstate moves among current residents; not future outflow.",
+  "risk_bands": {
+    "medium_min": 0.027976811709334297,
+    "high_min": 0.055953623418668594
+  },
+  "weighting": "ASECWT for training and state aggregates; primary selection/metrics unweighted.",
+  "per_year_test": {
+    "2018": {
+      "roc_auc": 0.7069469384659273,
+      "average_precision": 0.047771235041934465,
+      "accuracy": 0.9516355548132909,
+      "precision": 0.06677171558006696,
+      "recall": 0.17190669371196754,
+      "f1": 0.09618385586608029,
+      "brier": 0.014555287373218784,
+      "log_loss": 0.07336600383471194,
+      "observed_rate": 0.014970128065953587,
+      "mean_probability": 0.01714416487258164,
+      "confusion_matrix": [
+        [
+          125019,
+          4738
+        ],
+        [
+          1633,
+          339
+        ]
+      ]
+    },
+    "2019": {
+      "roc_auc": 0.6917292615520477,
+      "average_precision": 0.04790752045272045,
+      "accuracy": 0.951670139832684,
+      "precision": 0.06261075014766686,
+      "recall": 0.16241062308478038,
+      "f1": 0.090379423049595,
+      "brier": 0.014391348216209117,
+      "log_loss": 0.07327855239315582,
+      "observed_rate": 0.014783606656398177,
+      "mean_probability": 0.01705591675911389,
+      "confusion_matrix": [
+        [
+          125725,
+          4761
+        ],
+        [
+          1640,
+          318
+        ]
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.12.7",
+    "pandas": "3.0.2",
+    "sklearn": "1.9.0"
+  },
+  "source_file": {
+    "name": "cps_00001.csv",
+    "bytes": 848671425
+  },
+  "runtime_seconds": 22.441688700000668
+}

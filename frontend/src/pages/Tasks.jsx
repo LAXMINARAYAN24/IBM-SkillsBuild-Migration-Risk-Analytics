@@ -18,7 +18,7 @@ const initialTasks = [
   {
     id: 'TASK-102',
     title: 'IPUMS CPS Demographic Feature Cleaning',
-    description: 'Impute missing values, normalize household income, and map FIPS codes to standardized state names.',
+    description: 'Handle missing personal income, transform income, and map FIPS codes to standardized state names.',
     status: 'Completed',
     duration: '1m 18s',
     lastRun: 'Today, 10:46 AM',
@@ -65,7 +65,7 @@ export default function Tasks() {
     setIsRetraining(true);
     setTimeout(() => {
       setIsRetraining(false);
-      alert('Pipeline re-execution completed! Logistic Regression ROC-AUC verified at 0.7248.');
+      alert('This dashboard cannot run Python locally. Run `python migration_pipeline.py` from the project folder, then refresh this page.');
     }, 1500);
   };
 
@@ -157,7 +157,7 @@ export default function Tasks() {
           <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--bg-surface)', borderColor: 'var(--border-color)' }}>
             <span className="text-[10px] font-mono text-indigo-400 font-bold block mb-1">STEP 3</span>
             <p className="font-bold text-white mb-1">Model Training</p>
-            <p className="text-gray-400 text-[11px]">Scikit-Learn Logistic Regression yielding 0.7248 ROC-AUC score.</p>
+            <p className="text-gray-400 text-[11px]">Compare candidate models on validation data; the selected calibrated model achieved 0.6994 ROC-AUC on the untouched holdout.</p>
           </div>
           <div className="p-4 rounded-xl border" style={{ backgroundColor: 'var(--bg-surface)', borderColor: 'var(--border-color)' }}>
             <span className="text-[10px] font-mono text-indigo-400 font-bold block mb-1">STEP 4</span>

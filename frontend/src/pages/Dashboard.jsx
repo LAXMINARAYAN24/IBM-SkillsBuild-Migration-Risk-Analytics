@@ -66,7 +66,7 @@ export default function Dashboard() {
             </span>
           </div>
           <p className="text-xs text-gray-400 mt-1">
-            Real-time population mobility modeling & logistic regression risk scoring across all 50 states + DC
+            Retrospective interstate-move estimates for all 50 states + D.C. (2018–2019 holdout)
           </p>
         </div>
 
@@ -139,8 +139,8 @@ export default function Dashboard() {
         <MetricCard
           icon={AlertTriangle}
           label="Highest Risk State"
-          value={summary?.highest_risk_state || 'Wyoming'}
-          subtitle={`Risk Probability: ${(summary?.highest_risk_score * 100)?.toFixed(1) || '52.4'}%`}
+          value={summary?.highest_risk_state || '—'}
+          subtitle={`Average estimated rate: ${summary ? (summary.highest_risk_score * 100).toFixed(1) : '—'}%`}
           accent="rose"
           trend="up"
           delay={100}
@@ -148,8 +148,8 @@ export default function Dashboard() {
         <MetricCard
           icon={Activity}
           label="Model ROC-AUC"
-          value={(summary?.model_auc)?.toFixed(4) || '0.7248'}
-          subtitle={`Accuracy: ${(summary?.model_accuracy * 100)?.toFixed(1) || '72.5'}% on Test Split`}
+          value={summary?.model_auc?.toFixed(4) || '—'}
+          subtitle={`Average precision: ${summary ? (summary.model_average_precision * 100).toFixed(2) : '—'}%`}
           accent="emerald"
           trend="up"
           delay={200}
@@ -157,8 +157,8 @@ export default function Dashboard() {
         <MetricCard
           icon={Database}
           label="Census Records"
-          value={formatNumber(summary?.total_records || 1400000)}
-          subtitle={`Avg Migration: ${formatPercent(summary?.overall_migration_rate || 0.14)}`}
+          value={formatNumber(summary?.total_records || 0)}
+          subtitle={`Weighted migration rate: ${summary ? formatPercent(summary.overall_migration_rate) : '—'}`}
           accent="sky"
           trend="neutral"
           delay={300}

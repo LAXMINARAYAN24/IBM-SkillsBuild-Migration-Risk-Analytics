@@ -184,7 +184,7 @@ export default function Explorer() {
                 {histogram.map((entry, i) => (
                   <Cell
                     key={i}
-                    fill={entry.min < 0.35 ? '#10b981' : entry.min < 0.50 ? '#f59e0b' : '#f43f5e'}
+                    fill={entry.min < 0.02 ? '#10b981' : entry.min < 0.04 ? '#f59e0b' : '#f43f5e'}
                   />
                 ))}
               </Bar>
@@ -214,9 +214,9 @@ export default function Explorer() {
               onChange={(e) => setSelectedMetric(e.target.value)}
               className="form-input w-auto text-xs font-semibold cursor-pointer"
             >
-              <option value="avg_risk_score">Average Predicted Risk</option>
-              <option value="high_risk_pct">High-Risk Individual Share</option>
-              <option value="actual_migration_rate">Actual Census Outflow Rate</option>
+              <option value="avg_risk_score">Average Estimated Rate</option>
+              <option value="high_risk_pct">High-Threshold Screening Share</option>
+              <option value="actual_migration_rate">Observed Holdout Rate</option>
             </select>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Explorer() {
             <Bar dataKey={selectedMetric} radius={[0, 4, 4, 0]} barSize={9} name={selectedMetric}>
               {stateRisk.map((_, i) => {
                 const val = stateRisk[i]?.[selectedMetric] || 0;
-                const color = val > 0.48 ? '#f43f5e' : val > 0.36 ? '#f59e0b' : '#10b981';
+                const color = val > 0.04 ? '#f43f5e' : val > 0.02 ? '#f59e0b' : '#10b981';
                 return <Cell key={i} fill={color} />;
               })}
             </Bar>

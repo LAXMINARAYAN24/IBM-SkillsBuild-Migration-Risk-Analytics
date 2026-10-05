@@ -1,7 +1,33 @@
 # Large raw dataset files (exceeds GitHub 100MB file limit)
 data/cps_00001.csv
+data/raw/
+**/cps_*.csv
 *.zip
 *.tar.gz
+
+# Local scratch files and generated training outputs
+/work/
+/outputs/
+**/results/
+/data/migration_model.joblib
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environment variables and credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Downloaded duplicates and Office temporary files
+/LaxminarayanSahu_MigrationRiskAnalysis copy.ipynb
+/LaxminarayanSahu_ProjectReport copy.docx
+/README copy.md
+/requirements copy.txt
+~$*
+*.tmp
+*.log
 
 # Python virtual environment & cache
 __pycache__/

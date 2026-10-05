@@ -57,7 +57,7 @@ export default function StateAnalytics() {
             51 Jurisdictions State Risk Metrics
           </h1>
           <p className="text-xs text-gray-400 mt-1">
-            Spatial distribution, high-risk percentages, and Census baseline migration benchmarks
+            Calibrated 2018–2019 estimates, high-threshold screening shares, and observed holdout rates
           </p>
         </div>
       </div>
@@ -120,16 +120,8 @@ export default function StateAnalytics() {
                     {(s.actual_migration_rate * 100).toFixed(2)}%
                   </td>
                   <td>
-                    <span
-                      className={`badge ${
-                        s.avg_risk_score > 0.48
-                          ? 'badge-high'
-                          : s.avg_risk_score > 0.36
-                          ? 'badge-medium'
-                          : 'badge-low'
-                      }`}
-                    >
-                      {s.avg_risk_score > 0.48 ? 'Critical Flight' : s.avg_risk_score > 0.36 ? 'Moderate' : 'Stable Retention'}
+                    <span className={`badge ${s.high_risk_pct >= 0.15 ? 'badge-high' : s.high_risk_pct >= 0.08 ? 'badge-medium' : 'badge-low'}`}>
+                      {s.high_risk_pct >= 0.15 ? 'Elevated screening share' : s.high_risk_pct >= 0.08 ? 'Moderate screening share' : 'Lower screening share'}
                     </span>
                   </td>
                 </tr>

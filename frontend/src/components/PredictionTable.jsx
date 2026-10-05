@@ -151,7 +151,7 @@ export default function PredictionTable({ data, showControls = true }) {
                 { key: 'STATE_NAME', label: 'Jurisdiction / State' },
                 { key: 'YEAR', label: 'Census Year' },
                 { key: 'AGE', label: 'Age Cohort' },
-                { key: 'INCOME_CLEAN', label: 'Household Income' },
+                { key: 'INCOME_CLEAN', label: 'Personal Income' },
                 { key: 'RISK_SCORE', label: 'Predicted Flight Risk' },
                 { key: 'RISK_CATEGORY', label: 'Risk Tier' },
                 { key: 'actions', label: 'Inspector' },

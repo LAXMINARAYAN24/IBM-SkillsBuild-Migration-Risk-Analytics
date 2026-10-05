@@ -138,7 +138,7 @@ export default function DemographicBreakdown({ predictions }) {
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2">
             <DollarSign size={16} className="text-amber-400" />
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider">Household Income Strata</h4>
+            <h4 className="text-xs font-bold text-white uppercase tracking-wider">Personal Income Strata</h4>
           </div>
           <span className="text-[10px] text-gray-400 font-mono">Microdata</span>
         </div>

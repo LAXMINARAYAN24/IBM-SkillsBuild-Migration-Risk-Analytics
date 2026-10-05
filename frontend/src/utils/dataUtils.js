@@ -2,19 +2,22 @@ import Papa from 'papaparse';
 
 export async function loadCSV(path) {
   const response = await fetch(path);
+  if (!response.ok) throw new Error(`Could not load ${path}: ${response.status}`);
   const text = await response.text();
-  return new Promise((resolve) => {
+  return new Promise((resolve, reject) => {
     Papa.parse(text, {
       header: true,
       dynamicTyping: true,
       skipEmptyLines: true,
-      complete: (results) => resolve(results.data),
+      complete: (results) => results.errors.length ? reject(new Error(results.errors[0].message)) : resolve(results.data),
+      error: reject,
     });
   });
 }
 
 export async function loadJSON(path) {
   const response = await fetch(path);
+  if (!response.ok) throw new Error(`Could not load ${path}: ${response.status}`);
   return response.json();
 }
 

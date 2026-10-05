@@ -115,7 +115,7 @@ export default function HelpDocs() {
             P(Migrate = 1 | X) = 1 / (1 + e<sup>-(β<sub>0</sub> + β<sub>1</sub>Age + β<sub>2</sub>Income + β<sub>3</sub>StateFlowIndex)</sup>)
           </div>
           <p>
-            The model demonstrates an ROC-AUC of <strong>0.7248</strong> with 72.5% test accuracy across 51 jurisdictions.
+            The audited model has an ROC-AUC of <strong>0.6994</strong> on the 2018–2019 holdout. Because interstate moves are rare, consult average precision and calibration alongside accuracy.
           </p>
         </div>
       </div>

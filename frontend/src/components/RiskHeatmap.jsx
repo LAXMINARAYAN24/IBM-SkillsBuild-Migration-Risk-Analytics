@@ -28,13 +28,13 @@ export default function RiskHeatmap({ data }) {
             50-State + D.C. Migration Heat Grid
           </h3>
           <p className="text-xs text-gray-400 mt-0.5">
-            Hover over any state tile to inspect modeled flight metrics
+            Color is relative to the other jurisdictions; hover for calibrated estimates.
           </p>
         </div>
         {hoveredState && (
           <div className="hidden sm:flex items-center gap-2 px-3 py-1 rounded-lg bg-indigo-500/10 border border-indigo-500/20 text-xs font-mono">
             <span className="font-bold text-white">{hoveredState.STATE_NAME}:</span>
-            <span className="text-indigo-400">{(hoveredState.avg_risk_score * 100).toFixed(2)}% Risk</span>
+            <span className="text-indigo-400">{(hoveredState.avg_risk_score * 100).toFixed(2)}% estimated rate</span>
           </div>
         )}
       </div>
@@ -80,7 +80,7 @@ export default function RiskHeatmap({ data }) {
                       <span className="text-rose-400">{(state.high_risk_pct * 100).toFixed(1)}%</span>
                     </div>
                     <div className="flex justify-between gap-4">
-                      <span className="text-gray-400">Actual Census Outflow:</span>
+                      <span className="text-gray-400">Observed test rate:</span>
                       <span className="text-emerald-400">{(state.actual_migration_rate * 100).toFixed(2)}%</span>
                     </div>
                   </div>
@@ -94,23 +94,23 @@ export default function RiskHeatmap({ data }) {
       {/* Legend */}
       <div className="flex items-center justify-between flex-wrap gap-3 mt-5 pt-3 border-t text-[11px]"
            style={{ borderColor: 'var(--border-color)' }}>
-        <span className="text-gray-400 font-medium">Risk Spectrum:</span>
+        <span className="text-gray-400 font-medium">Relative rate spectrum:</span>
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded bg-emerald-500"></div>
-            <span className="text-gray-400">Low (&lt;30%)</span>
+            <span className="text-gray-400">Lower</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded bg-amber-500"></div>
-            <span className="text-gray-400">Moderate (30–40%)</span>
+            <span className="text-gray-400">Moderate</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded bg-orange-500"></div>
-            <span className="text-gray-400">Elevated (40–50%)</span>
+            <span className="text-gray-400">Elevated</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded bg-red-500"></div>
-            <span className="text-gray-400">Critical (&gt;50%)</span>
+            <span className="text-gray-400">Highest</span>
           </div>
         </div>
       </div>
